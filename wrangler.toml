@@ -1,0 +1,32 @@
+name               = "frosty-meadow-9381"
+main               = "src/index.js"
+compatibility_date = "2024-01-01"
+
+# ── Vars ────────────────────────────────────────────────────
+[vars]
+DISPLAY_NAME    = "Nimendra"
+BLOG_URL        = "https://blog.nimendra.xyz"
+GITHUB_URL      = "https://github.com/nmdra"
+TWITTER_URL     = "https://twitter.com/nimendra_"
+LINKEDIN_URL    = "https://linkedin.com/in/nimendra"
+EMAIL           = "contact@nimendra.xyz"
+GOODREADS       = "https://goodreads.com/nimendra"
+LAST_UPDATED    = "2026-03-19"
+WORKERS_DEV_URL = "frosty-meadow-9381.nimendraonline.workers.dev"
+
+# ── Rate Limiting ────────────────────────────────────────────
+[[ratelimits]]
+name         = "RATE_LIMITER"
+namespace_id = "1001"
+
+[ratelimits.simple]
+limit  = 60
+period = 60
+
+# ── Routes ───────────────────────────────────────────────────
+routes = [
+  { pattern = "nimendra.xyz/*",       zone_name = "nimendra.xyz" },
+  { pattern = "www.nimendra.xyz/*",   zone_name = "nimendra.xyz" },
+  { pattern = "hello.nimendra.xyz/*", zone_name = "nimendra.xyz" },
+  { pattern = "api.nimendra.xyz/*",   zone_name = "nimendra.xyz" },
+]
