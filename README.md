@@ -5,5 +5,5 @@ Serves terminal-friendly API output (best with curl).
 Routes: /, /about, /now, /links.
 Unknown routes return 404.
 Entry point: src/index.js.
-Run locally: npx wrangler dev
-Deploy: npx wrangler deploy
+Run locally: `npx wrangler dev`
+Deploy: `npx wrangler deploy`
