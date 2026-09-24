@@ -18,6 +18,7 @@ DISPLAY_NAME    = "NIMENDRA"
 BLOG_URL        = "https://blog.nimendra.online"
 GITHUB_URL      = "https://github.com/nmdra"
 TWITTER_URL     = "https://twitter.com/nimendra_"
+BSKY_URL        = "https://bsky.app/profile/nimendra.online"
 LINKEDIN_URL    = "https://linkedin.com/in/nimendra"
 EMAIL           = "contact@nimendra.online"
 GOODREADS       = "https://goodreads.com/nimendra"
@@ -36,4 +37,8 @@ period = 60
 # Placement
 [placement]
 mode = "smart"
+
+# Static assets (favicons, icons)
+[assets]
+directory = "./public"
 

@@ -18,6 +18,12 @@ export default {
     const redirect = handleRedirects(url, env);
     if (redirect) return redirect;
 
+    // ── Static assets (favicons, icons) ─────────────────
+    const assetPaths = ["/favicon.ico", "/favicon.svg", "/apple-touch-icon.png", "/icon-192.png", "/icon-512.png"];
+    if (assetPaths.includes(url.pathname)) {
+      return env.ASSETS.fetch(request);
+    }
+
     // ── Bio link page ────────────────────────────────────
     if (url.hostname === "links.nimendra.online") {
       return isCurl ? bioTextPage(env) : bioHtmlPage(env);

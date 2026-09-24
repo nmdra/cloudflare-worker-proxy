@@ -8,15 +8,16 @@ export function bioTextPage(env) {
 ${divider}
 ${DIM}~ / ${CYAN}links${RESET}
 ${GREEN}${BOLD}  ${env.DISPLAY_NAME}${RESET}
-${DIM}DevOps · Linux · open source${RESET}
+${DIM}SRE · AI · Linux · open source${RESET}
 ${divider}
 
 ${WHITE}  > Blog      ${link("blog.nimendra.online",           env.BLOG_URL)}
 ${WHITE}  > GitHub    ${link("github.com/nmdra",               env.GITHUB_URL)}
-${WHITE}  > Twitter   ${link("@nimendra_",                     env.TWITTER_URL)}
-${WHITE}  > LinkedIn  ${link("in/nimendra",                    env.LINKEDIN_URL)}
-${WHITE}  > Goodreads ${link("goodreads.com/nimendra",         env.GOODREADS)}
-${WHITE}  > Email     ${link(env.EMAIL,                        `mailto:${env.EMAIL}`)}
+${WHITE}  > Twitter   ${link("@nimendra_",                    env.TWITTER_URL)}
+${WHITE}  > Bluesky   ${link("@nimendra.online",              env.BSKY_URL)}
+${WHITE}  > LinkedIn  ${link("in/nimendra",                   env.LINKEDIN_URL)}
+${WHITE}  > Goodreads ${link("goodreads.com/nimendra",        env.GOODREADS)}
+${WHITE}  > Email     ${link(env.EMAIL,                       `mailto:${env.EMAIL}`)}
 
 ${footer(env.DISPLAY_NAME)}
 `;

@@ -1,20 +1,31 @@
 // Terminal-style bio link page for browsers
 
+const ICONS = {
+  github: "https://cdn.simpleicons.org/github/6e7681",
+  x: "https://cdn.simpleicons.org/x/6e7681",
+  bluesky: "https://cdn.simpleicons.org/bluesky/6e7681",
+  linkedin: "https://cdn.simpleicons.org/linkedin/6e7681",
+  goodreads: "https://cdn.simpleicons.org/goodreads/6e7681",
+  blog: "https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/pen-line.svg",
+  email: "https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/mail.svg",
+};
+
 export function bioHtmlPage(env) {
   const links = [
-    { label: "Blog", sub: "writing & notes", href: env.BLOG_URL, primary: true },
-    { label: "GitHub", sub: "code & projects", href: env.GITHUB_URL },
-    { label: "Twitter", sub: "@nimendra_", href: env.TWITTER_URL },
-    { label: "LinkedIn", sub: "in/nimendra", href: env.LINKEDIN_URL },
-    { label: "Goodreads", sub: "what i'm reading", href: env.GOODREADS },
-    { label: "Email", sub: env.EMAIL, href: `mailto:${env.EMAIL}` },
+    { label: "Blog", sub: "writing & notes", href: env.BLOG_URL, primary: true, icon: ICONS.blog },
+    { label: "GitHub", sub: "code & projects", href: env.GITHUB_URL, icon: ICONS.github },
+    { label: "Twitter", sub: "@nimendra_", href: env.TWITTER_URL, icon: ICONS.x },
+    { label: "Bluesky", sub: "@nimendra.online", href: env.BSKY_URL, icon: ICONS.bluesky },
+    { label: "LinkedIn", sub: "in/nimendra", href: env.LINKEDIN_URL, icon: ICONS.linkedin },
+    { label: "Goodreads", sub: "what i'm reading", href: env.GOODREADS, icon: ICONS.goodreads },
+    { label: "Email", sub: env.EMAIL, href: `mailto:${env.EMAIL}`, icon: ICONS.email },
   ];
 
   const buttons = links
     .map(
       (l) => `
       <a class="btn${l.primary ? " primary" : ""}" href="${l.href}" rel="noopener">
-        <span class="prompt">&gt;</span>
+        <span class="icon" style="-webkit-mask-image:url('${l.icon}');mask-image:url('${l.icon}')" aria-hidden="true"></span>
         <span class="label">${l.label}</span>
         <span class="sub">${l.sub}</span>
       </a>`
@@ -27,10 +38,14 @@ export function bioHtmlPage(env) {
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#0d1117">
-  <meta name="description" content="Links for ${env.DISPLAY_NAME} — blog, GitHub, and more.">
+  <meta name="description" content="Links for ${env.DISPLAY_NAME} — blog, GitHub, Bluesky, and more.">
   <meta property="og:title" content="${env.DISPLAY_NAME} — Links">
-  <meta property="og:description" content="Find me online: blog, GitHub, Twitter, LinkedIn, and more.">
+  <meta property="og:description" content="Find me online: blog, GitHub, Bluesky, LinkedIn, and more.">
   <meta property="og:type" content="profile">
+  <meta property="og:image" content="https://links.nimendra.online/icon-512.png">
+  <link rel="icon" href="/favicon.ico" sizes="48x48">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <title>${env.DISPLAY_NAME} — Links</title>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -119,9 +134,19 @@ export function bioHtmlPage(env) {
       transition: border-color 0.15s ease, background-color 0.15s ease, transform 0.1s ease;
     }
 
-    .btn .prompt {
-      color: var(--dim);
-      font-weight: 700;
+    .btn .icon {
+      display: inline-block;
+      width: 16px;
+      height: 16px;
+      flex-shrink: 0;
+      background-color: var(--dim);
+      -webkit-mask-size: contain;
+      mask-size: contain;
+      -webkit-mask-repeat: no-repeat;
+      mask-repeat: no-repeat;
+      -webkit-mask-position: center;
+      mask-position: center;
+      transition: background-color 0.15s ease;
     }
 
     .btn .label {
@@ -143,7 +168,10 @@ export function bioHtmlPage(env) {
       border-color: var(--green);
     }
 
-    .btn.primary .prompt,
+    .btn.primary .icon {
+      background-color: var(--green);
+    }
+
     .btn.primary .label {
       color: var(--green);
     }
@@ -152,6 +180,10 @@ export function bioHtmlPage(env) {
       border-color: var(--green);
       background: #1c2128;
       transform: translateY(-1px);
+    }
+
+    .btn:hover .icon {
+      background-color: var(--green);
     }
 
     .btn:focus-visible {
@@ -182,6 +214,12 @@ export function bioHtmlPage(env) {
         text-align: left;
         max-width: none;
       }
+      .btn .icon {
+        grid-row: 1;
+      }
+      .btn .label {
+        grid-column: 2;
+      }
     }
 
     @media (prefers-reduced-motion: reduce) {
@@ -194,7 +232,7 @@ export function bioHtmlPage(env) {
   <main class="card">
     <p class="prompt-line">~ / <span class="path">links</span></p>
     <h1>${env.DISPLAY_NAME}</h1>
-    <p class="bio">DevOps · Linux · open source</p>
+    <p class="bio">SRE · AI · Linux · open source</p>
     <hr class="divider">
     <nav class="links" aria-label="Links">
 ${buttons}
