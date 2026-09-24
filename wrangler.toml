@@ -7,8 +7,8 @@ workers_dev        = true
 
 # ── Vars ────────────────────────────────────────────────────
 [vars]
-DISPLAY_NAME    = "Nimendra"
-BLOG_URL        = "https://blog.nimendra.xyz"
+DISPLAY_NAME    = "NIMENDRA"
+BLOG_URL        = "https://blog.nimendra.online"
 GITHUB_URL      = "https://github.com/nmdra"
 TWITTER_URL     = "https://twitter.com/nimendra_"
 LINKEDIN_URL    = "https://linkedin.com/in/nimendra"
