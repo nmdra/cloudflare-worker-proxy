@@ -10,7 +10,7 @@ ${GREEN}${BOLD}  Hi, I'm ${env.DISPLAY_NAME} 👋${RESET}
 ${DIM}who loves to build things, break things, and learn from both.${RESET}
 ${divider}
 
-${WHITE}I'm into DevOps, Linux, and Open Source — basically anything
+${WHITE}I'm into SRE, AI, Linux, and Open Source — basically anything
 that lets me dig deeper into how systems actually work.
 Right now I'm exploring AWS, K8s, Go & Distributed Systems.${RESET}
 
