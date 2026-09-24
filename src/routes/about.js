@@ -9,8 +9,7 @@ ${divider}
 ${GREEN}${BOLD}  About me${RESET}
 ${divider}
 
-${WHITE}I'm ${env.DISPLAY_NAME}, a Software Engineering student at SLIIT,
-Sri Lanka. I spend most of my time tinkering with systems,
+${WHITE}I'm ${env.DISPLAY_NAME}. I spend most of my time tinkering with systems,
 automating things I probably shouldn't, and going down
 rabbit holes on Linux and DevOps.${RESET}
 

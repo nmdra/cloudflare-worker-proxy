@@ -8,7 +8,7 @@ export function bioTextPage(env) {
 ${divider}
 ${DIM}~ / ${CYAN}links${RESET}
 ${GREEN}${BOLD}  ${env.DISPLAY_NAME}${RESET}
-${DIM}SE student · DevOps · Linux · open source${RESET}
+${DIM}DevOps · Linux · open source${RESET}
 ${divider}
 
 ${WHITE}  > Blog      ${link("blog.nimendra.online",           env.BLOG_URL)}

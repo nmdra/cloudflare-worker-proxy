@@ -7,7 +7,6 @@ export function homePage(env) {
   const body = `
 ${divider}
 ${GREEN}${BOLD}  Hi, I'm ${env.DISPLAY_NAME} 👋${RESET}
-${WHITE}A Software Engineering student at SLIIT, Sri Lanka${RESET}
 ${DIM}who loves to build things, break things, and learn from both.${RESET}
 ${divider}
 

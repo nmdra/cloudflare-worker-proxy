@@ -194,7 +194,7 @@ export function bioHtmlPage(env) {
   <main class="card">
     <p class="prompt-line">~ / <span class="path">links</span></p>
     <h1>${env.DISPLAY_NAME}</h1>
-    <p class="bio">SE student · DevOps · Linux · open source</p>
+    <p class="bio">DevOps · Linux · open source</p>
     <hr class="divider">
     <nav class="links" aria-label="Links">
 ${buttons}
