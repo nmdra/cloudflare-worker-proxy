@@ -1,5 +1,7 @@
 import { handleRedirects }  from "./redirects.js";
 import { browserResponse }  from "./browser.js";
+import { bioHtmlPage }      from "./bioHtml.js";
+import { bioTextPage }      from "./routes/bioText.js";
 import { homePage }         from "./routes/home.js";
 import { aboutPage }        from "./routes/about.js";
 import { nowPage }          from "./routes/now.js";
@@ -15,6 +17,11 @@ export default {
     // ── Redirects ────────────────────────────────────────
     const redirect = handleRedirects(url, env);
     if (redirect) return redirect;
+
+    // ── Bio link page ────────────────────────────────────
+    if (url.hostname === "links.nimendra.online") {
+      return isCurl ? bioTextPage(env) : bioHtmlPage(env);
+    }
 
     // ── API ──────────────────────────────────────────────
     if (url.hostname === "api.nimendra.online") {
