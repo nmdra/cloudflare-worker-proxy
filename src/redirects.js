@@ -6,12 +6,6 @@ export function handleRedirects(url, env) {
     return Response.redirect(url.toString(), 301);
   }
 
-  if (url.hostname === "hello.nimendra.xyz") {
-    url.hostname = blogHostname;
-    url.pathname = "/about";
-    return Response.redirect(url.toString(), 301);
-  }
-
   if (url.hostname === env.WORKERS_DEV_URL) {
     url.hostname = blogHostname;
     return Response.redirect(url.toString(), 301);
