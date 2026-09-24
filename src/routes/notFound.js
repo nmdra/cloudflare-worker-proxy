@@ -11,10 +11,10 @@ ${divider}
 
 ${WHITE}couldn't find "${path}" — but here's what's available:${RESET}
 
-${WHITE}  curl api.nimendra.xyz${CYAN}/${RESET}
-${WHITE}  curl api.nimendra.xyz${CYAN}/about${RESET}
-${WHITE}  curl api.nimendra.xyz${CYAN}/now${RESET}
-${WHITE}  curl api.nimendra.xyz${CYAN}/links${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/about${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/now${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/links${RESET}
 
 ${footer(env.DISPLAY_NAME)}
 `;

@@ -17,7 +17,7 @@ export default {
     if (redirect) return redirect;
 
     // ── API ──────────────────────────────────────────────
-    if (url.hostname === "api.nimendra.xyz") {
+    if (url.hostname === "api.nimendra.online") {
 
       if (!isCurl) return browserResponse(env.BLOG_URL);
 

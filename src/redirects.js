@@ -1,7 +1,7 @@
 export function handleRedirects(url, env) {
   const blogHostname = new URL(env.BLOG_URL).hostname;
 
-  if (url.hostname === "nimendra.xyz" || url.hostname === "www.nimendra.xyz") {
+  if (url.hostname === "nimendra.online" || url.hostname === "www.nimendra.online") {
     url.hostname = blogHostname;
     return Response.redirect(url.toString(), 301);
   }

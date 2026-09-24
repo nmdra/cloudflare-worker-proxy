@@ -42,7 +42,7 @@ export function browserResponse(blogUrl) {
   <div class="box">
     <p class="green">👋 Hi, I'm Nimendra</p>
     <p class="dim">this API is meant to be accessed via terminal</p>
-    <code>curl api.nimendra.xyz</code>
+    <code>curl api.nimendra.online</code>
     <p class="redirect dim">
       redirecting to <span class="cyan">${blogUrl}</span> in 5 seconds...
     </p>

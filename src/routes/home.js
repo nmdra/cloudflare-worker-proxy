@@ -18,9 +18,9 @@ Right now I'm exploring AWS, K8s, Go & Distributed Systems.${RESET}
 ${divider}
 
 ${YELLOW}Here's what you can explore:${RESET}
-${WHITE}  curl api.nimendra.xyz${CYAN}/about${RESET}   ${DIM}— a bit more about me${RESET}
-${WHITE}  curl api.nimendra.xyz${CYAN}/now${RESET}     ${DIM}— what i'm up to lately${RESET}
-${WHITE}  curl api.nimendra.xyz${CYAN}/links${RESET}   ${DIM}— where to find me${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/about${RESET}   ${DIM}— a bit more about me${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/now${RESET}     ${DIM}— what i'm up to lately${RESET}
+${WHITE}  curl api.nimendra.online${CYAN}/links${RESET}   ${DIM}— where to find me${RESET}
 
 ${footer(env.DISPLAY_NAME)}
 `;

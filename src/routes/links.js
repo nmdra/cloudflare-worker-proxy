@@ -15,7 +15,7 @@ Feel free to reach out anytime!${RESET}
 ${WHITE}  Github    ${link("github.com/nmdra",  env.GITHUB_URL)}
 ${WHITE}  Twitter   ${link("@nimendra_",        env.TWITTER_URL)}
 ${WHITE}  LinkedIn  ${link("in/nimendra",       env.LINKEDIN_URL)}
-${WHITE}  Blog      ${link("blog.nimendra.xyz", env.BLOG_URL)}
+${WHITE}  Blog      ${link("blog.nimendra.online", env.BLOG_URL)}
 ${WHITE}  Email     ${link(env.EMAIL,           `mailto:${env.EMAIL}`)}
 
 ${footer(env.DISPLAY_NAME)}
