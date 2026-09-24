@@ -4,7 +4,7 @@ const ICONS = {
   github: "https://cdn.simpleicons.org/github/6e7681",
   x: "https://cdn.simpleicons.org/x/6e7681",
   bluesky: "https://cdn.simpleicons.org/bluesky/6e7681",
-  linkedin: "https://cdn.simpleicons.org/linkedin/6e7681",
+  linkedin: "https://cdn.jsdelivr.net/npm/simple-icons@13.21.0/icons/linkedin.svg",
   goodreads: "https://cdn.simpleicons.org/goodreads/6e7681",
   blog: "https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/pen-line.svg",
   email: "https://cdn.jsdelivr.net/npm/lucide-static@0.544.0/icons/mail.svg",
