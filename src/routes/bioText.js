@@ -8,8 +8,6 @@ export function bioTextPage(env) {
 ${divider}
 ${DIM}~ / ${CYAN}links${RESET}
 ${GREEN}${BOLD}  ${env.DISPLAY_NAME}${RESET}
-${DIM}I tinker with SRE, AI, Linux, and open source.
-Here's where I write, build, and spend time online.${RESET}
 ${divider}
 
 ${WHITE}  > Blog      ${link("blog.nimendra.online",           env.BLOG_URL)}

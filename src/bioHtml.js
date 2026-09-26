@@ -106,14 +106,12 @@ export function bioHtmlPage(env) {
     .prompt span { color: var(--cyan); }
 
     h1 {
-      margin: 0;
+      margin: 0 0 2rem;
       color: var(--green);
       font-size: clamp(1.75rem, 7vw, 2.5rem);
       letter-spacing: -0.04em;
       line-height: 1.2;
     }
-
-    .bio { margin: 0.85rem 0 2rem; max-width: 43ch; color: var(--muted); }
 
     .section-heading {
       display: flex;
@@ -198,7 +196,6 @@ export function bioHtmlPage(env) {
     <div class="content">
       <p class="prompt"><span>~</span> $ whoami</p>
       <h1>${env.DISPLAY_NAME}</h1>
-      <p class="bio">I tinker with SRE, AI, Linux, and open source. Here's where I write, build, and spend time online.</p>
       <h2 class="section-heading" id="links-heading">Find me online</h2>
       <nav class="links" aria-labelledby="links-heading">
 ${buttons}
